@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumor Size Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h2>Calculate the size of the tissue that needs to be cut</h2>
+        <form id="tumorForm">
+            <label for="height">Tumor Height (cm):</label>
+            <input type="number" id="height" required step="any">
+            <br>
+            <label for="width">Tumor Width (cm):</label>
+            <input type="number" id="width" required step="any">
+            <br>
+            
+            <label for="margin">Margin to Leave (cm):</label>
+            <input type="number" id="margin" required step="any">
+            <br>
+            
+            <label for="shrinkage">Percentage of Shrinkage:</label>
+            <input type="number" id="shrinkage" required step="any">
+            <br>
+            
+            <label for="thickness_US">Thickness (cm):</label>
+            <input type="number" id="thickness_US" required step="any">
+            <br>
+           
+            <label for="radiation">Radiation:</label>
+            <input type="checkbox" id="radiation">
+            <br>
+            <br>
+            <button type="button" onclick="calculateSize()">Calculate</button>
+        </form>
+
+        <div id="result"></div>
+        <div id="chartContainer">
+            <canvas id="ellipseCanvas"></canvas>
+            <div id="x-axis"></div>
+            <div id="y-axis"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
