@@ -11,6 +11,11 @@ body {
     overflow: auto;
 }
 
+h2 {
+    font-size: 24px; /* גודל קטן יותר לכותרות */
+}
+
+
 #container {
     background-color: #e8e8e8; /* רקע אפור */
     border: 2px solid #add5ff; /* מסגרת ירוקה */
@@ -48,40 +53,47 @@ body {
     border: none;
 }
 
-#x-axis {
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
-#y-axis {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -20px;
-    text-align: right;
-}
-
 button {
     background-color: #add5ff; /* רקע ירוק */
-    color: #0a0606; /*צבע טקסטן */
+    color: #0a0606; /* צבע טקסט לבן */
     padding: 15px 30px; /* מרווח פנימי */
     font-size: 16px;
     border: none;
     border-radius: 5px; /* פינות מעוגלות */
     cursor: pointer;
 }
-#tumorForm input[type="number"], #tumorForm input[type="checkbox"] {
-    width: 400px; /* רוחב התיבות מספר */
-    height: 30px; /* גובה התיבות מספר */
-    margin-bottom: 10px; /* מרווח בין התיבות מספר */
+#tumorForm {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center; /* להראות את התיבות באמצע */
 }
+
+#tumorForm input[type="number"], #tumorForm input[type="checkbox"] {
+    width: 100%; /* אחידות ברוחב */
+    height: 40px; /* גובה התיבות מספר */
+    margin-bottom: 10px;
+    border: 2px solid #add5ff;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #e5edf6;
+}
+
+
+
+#tumorForm input[type="checkbox"] {
+    width: auto; /* כדי לא לשנות את רוחב התיבה של הcheckbox */
+}
+
 
 #tumorForm input[type="checkbox"] {
    width: 20px;
    height: 30px;
+}
+
+#result {
+    font-size: 20px;
+    white-space: nowrap;
 }
 
 
