@@ -115,66 +115,25 @@ const defaultValues = {
     ctx.stroke();
     ctx.closePath();
   
-    // Draw numbers on the left side
-   // drawYAxisNumbers(ctx, centerX/cmToPixels, centerY/cmToPixels, ellipseHeight/cmToPixels, cmToPixels);
   
-    // Draw numbers on the bottom
-  //  drawXAxisNumbers(ctx, centerX, centerY, ellipseWidth/cmToPixels, cmToPixels);
-  }
+    // Draw vertical line (אנכי)
+    ctx.strokeStyle = "blue";
+    ctx.beginPath();
+    ctx.moveTo(centerX, centerY - ellipseHeight / 2);
+    ctx.lineTo(centerX, centerY + ellipseHeight / 2);
+    ctx.stroke();
+    ctx.closePath();
   
-  // ...
-  
-  /*function drawYAxisNumbers(ctx, centerX, centerY, ellipseHeight, cmToPixels) {
-   /*const yAxis = document.getElementById("y-axis");
-    yAxis.innerHTML = "";
-  
-    let step;
-    if (ellipseHeight > 20) {
-      step = 10;
-    } else if (ellipseHeight >= 10) {
-      step = 5;
-    } else if (ellipseHeight >= 3) {
-      step = 2;
-    } else if (ellipseHeight >= 1) {
-      step = 0.5;
-    } else {
-      step = 0.2;
+    // Draw horizontal line (אופקי)
+    ctx.beginPath();
+    ctx.moveTo(centerX - ellipseWidth / 2, centerY);
+    ctx.lineTo(centerX + ellipseWidth / 2, centerY);
+    ctx.stroke();
+    ctx.closePath();
+    // Display dimensions on the canvas
+      ctx.fillStyle = "blue";
+      ctx.font = "12px Arial";
+      ctx.fillText(`width: ${newWidth.toFixed(2)} cm`, centerX + ellipseWidth / 32, centerY - 7);
+      ctx.fillText(`height: ${newHeight.toFixed(2)} cm`, centerX - 90, centerY + ellipseWidth / 32+50);
     }
-    ctx.fillStyle = "black";
-    ctx.font = "18px serif";
-    ctx.fillText("1", 15, 12);
    
-    i=0
-    const yPos = centerY - ellipseHeight / 2 + i;
-    
-    /*for (let i = 0; i <= ellipseHeight; i += step * cmToPixels) {
-  
-  
-      const yPos = centerY - ellipseHeight / 2 + i;
-      ctx.fillText((i / cmToPixels).toFixed(2), centerX - 30, yPos + 15);
-    }
-  }
-  
-  function drawXAxisNumbers(ctx, centerX, centerY, ellipseWidth, cmToPixels) {
-    const xAxis = document.getElementById("x-axis");
-    xAxis.innerHTML = "";
-  
-    let step;
-    if (ellipseWidth > 20) 
-      step = 10;
-    } else if (ellipseWidth >= 10) {
-      step = 5;
-    } else if (ellipseWidth >= 3) {
-      step = 2;
-    } else if (ellipseWidth >= 1) {
-      step = 0.5;
-    } else {
-      step = 0.2;
-    }
-    
-    for (let i = 0; i <= ellipseWidth; i += step * cmToPixels) {
-      const xPos = centerX - ellipseWidth / 2 + i;
-      ctx.fillText((i / cmToPixels).toFixed(2), xPos+15, centerY + 20);
-    }
-  }
-  */

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tumor Size Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <title>Tumor Size Calculator</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+
 
 <body>
     <div id="container">
@@ -36,13 +39,23 @@
             <br>
             <br>
             <button type="button" onclick="calculateSize()">Calculate</button>
+          
         </form>
 
         <div id="result"></div>
         <div id="chartContainer">
             <canvas id="ellipseCanvas"></canvas>
-            <div id="x-axis"></div>
-            <div id="y-axis"></div>
+            <div style="position: absolute; left: 50%;">
+              <div style="position: relative; top: -50%; transform: translateX(-50%);">
+               
+              </div>
+            </div>
+
+            <!-- אופקי -->
+            <div style="position: absolute; top: 50%;">
+              <div style="position: relative; transform: translateY(-50%);">
+               
+              </div>
         </div>
     </div>
 
