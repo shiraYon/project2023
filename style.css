@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     flex-direction: column;
@@ -17,11 +18,19 @@ h2 {
 
 
 #container {
+    width: 50%;
     background-color: #e8e8e8; /* רקע אפור */
     border: 2px solid #add5ff; /* מסגרת ירוקה */
     border-radius: 10px; /* פינות מעוגלות */
     padding: 50px; /* מרווח פנימי */
     margin-top: 500px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #container {
+        width: 100%; 
+    }
 }
 
 #chartContainer {
@@ -31,17 +40,11 @@ h2 {
     align-items: center;
 }
 
-
 #tumorForm {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-
-#result {
-    font-size: 20px;
 }
 
 #ellipseCanvas {
@@ -71,7 +74,7 @@ button {
 
 #tumorForm input[type="number"], #tumorForm input[type="checkbox"] {
     width: 170px;
-    height: 20px; /* גובה התיבות מספר */
+    height: 25px; /* גובה התיבות מספר */
     margin-bottom: 10px;
     border: 2px solid #add5ff;
     border-radius: 10px;
@@ -95,6 +98,12 @@ button {
 #result {
     font-size: 20px;
     white-space: nowrap;
+    padding: 20px;
 }
 
-
+@media only screen and (max-width: 600px) {
+    #result {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
