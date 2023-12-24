@@ -58,7 +58,7 @@ const defaultValues = {
     const resultDiv = document.getElementById("result");
     resultDiv.innerHTML = `* Original tumor size:<br>Height: ${height} cm, Width: ${width} cm<br><br>
     * Tumor size with margins:<br>Height: ${height+margin} cm, Width: ${width+margin} cm<br><br>
-    <strong>* With a  ${finalShrinkage}% shrinkage you need to cut tissue of size:<br>Height: ${newHeight.toFixed(
+    <strong>* With a ${finalShrinkage}% shrinkage the tissue size is:<br>Height: ${newHeight.toFixed(
       2,
     )} cm, Width: ${newWidth.toFixed(
       2,
@@ -119,7 +119,7 @@ const defaultValues = {
     ctx.closePath();
 
 
-    // Draw vertical line (אנכי)
+    // Draw vertical line 
     ctx.strokeStyle = "black";
     ctx.beginPath();
     ctx.moveTo(centerX, centerY - ellipseHeight / 2);
@@ -127,7 +127,7 @@ const defaultValues = {
     ctx.stroke();
     ctx.closePath();
 
-    // Draw horizontal line (אופקי)
+    // Draw horizontal line 
     ctx.beginPath();
     ctx.moveTo(centerX - ellipseWidth / 2, centerY);
     ctx.lineTo(centerX + ellipseWidth / 2, centerY);
