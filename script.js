@@ -65,7 +65,7 @@ const defaultValues = {
   
     if (radiation) {
       resultDiv.innerHTML +=
-        "<br><br>Since radiation is involved, we used shrinkage of 50%.";
+        "<br><br>Since radiation is involved<br>we used shrinkage of 50%.";
     }
   
     // Draw ellipse
